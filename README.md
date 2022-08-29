@@ -1,5 +1,6 @@
 # OpticReader-v6.1
 Entry point in main.py. Python version: 3.10
+
 Training repo: https://github.com/lorenzopol/svmTrainer
 ## Required packages
 - Opencv (v4.6.0.66): pip install opencv-python
