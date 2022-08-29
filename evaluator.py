@@ -160,7 +160,7 @@ def detect_answers(bgr_image: np.array, bgr_img_for_debug: np.array,
     # ------------- DEBUG WINDOW ------------------------
     if debug != "No":
         cv2.imshow("result", bgr_img_for_debug)
-        cv2.waitKey(750)
+        cv2.waitKey(0)
         cv2.destroyAllWindows()
 
     return user_answer_dict
