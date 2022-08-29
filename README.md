@@ -1,14 +1,14 @@
 # OpticReader-v6.1
 Entry point in main.py
 ## Required packages
-- Opencv: pip install opencv-python
-- numpy: pip install numpy
-- joblib: pip install joblib
-- pyzbar: pip install pyzbar
-- xlsxwriter: pip install xlsxwriter
-- dearpygui: pip install dearpygui
+- Opencv (v4.6.0.66): pip install opencv-python
+- numpy (v1.23.1): pip install numpy
+- joblib (v1.1.0): pip install joblib
+- pyzbar (v0.1.9): pip install pyzbar
+- xlsxwriter (v3.0.3): pip install xlsxwriter
+- dearpygui (v1.6.2): pip install dearpygui
 
-Probably sklearn (pip install sklearn) is required for SCV prediction
+Probably sklearn (pip install sklearn) is required for SCV prediction;
 
 ## File description
 - **custom_utils.py**: general purpose function container (pyzbar is required, numpy is use only in type annotation);
