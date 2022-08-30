@@ -49,12 +49,12 @@ class Utils:
         return out
 
     @staticmethod
-    def decode_ean_barcode(cropped_img):
+    def decode_ean_barcode(cropped_img, is_barcode_ean13=True):
         """read a EAN13-barcode and return the candidate IDC (ID Candidato) from -> N-GG-MM-AAAA-IDC"""
         mid = decode(cropped_img)
         if mid:
             string_number = mid[0].data.decode("utf-8")
-            return string_number[-4:-1]
+            return string_number[-4:-1] if is_barcode_ean13 else string_number
         else:
             return input("Rilevamento BARCODE fallito: inserire numero della prova >>")
 

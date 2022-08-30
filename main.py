@@ -66,7 +66,8 @@ class DpgExt:
             all_users, how_many_people_got_a_question_right_dict = evaluator(abs_img_path, valid_ids,
                                                                              how_many_people_got_a_question_right_dict,
                                                                              all_users,
-                                                                             is_60_question_form, debug)
+                                                                             is_60_question_form, debug,
+                                                                             is_barcode_ean13)
         sorted_by_score_user_list = sorted(all_users, key=lambda x: (x.score, x.per_sub_score), reverse=True)
         for placement, user in enumerate(sorted_by_score_user_list):
             u.xlsx_dumper(user, placement + 1, u.retrieve_or_display_answers(), workbook, is_60_question_form)

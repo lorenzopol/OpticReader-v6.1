@@ -220,11 +220,11 @@ def calculate_single_sub_score(score_list):
 
 def evaluator(abs_img_path: str, valid_ids,
               how_many_people_got_a_question_right_dict: Dict[int, int], all_users: List[User],
-              is_60_question_sim: bool, debug: str):
+              is_60_question_sim: bool, debug: str, is_barcode_ean13: bool):
     """given ONE img_abs_path, compute scores, and update global scoring dict"""
     BGR_test: np.array = cv2.imread(abs_img_path)
 
-    cropped_bar_code_id = u.decode_ean_barcode(BGR_test[((BGR_test.shape[0]) * 3) // 4:])
+    cropped_bar_code_id = u.decode_ean_barcode(BGR_test[((BGR_test.shape[0]) * 3) // 4:], is_barcode_ean13)
     if cropped_bar_code_id not in valid_ids:
         cropped_bar_code_id = input(f"BARCODE fallito per {abs_img_path} >>")
 
